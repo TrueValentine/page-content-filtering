@@ -1,0 +1,107 @@
+/*
+ * Page Content Filtering Demo
+ *
+ * Copyright 2015 Carlos Ruiz / carlosruiz.me
+ *
+ * This CSS is used only to support the demo page
+ */
+
+@media (min-width: 768px) {
+	body {
+		background-color: #ccc;
+		margin: 20px 0 0 0;
+	}
+	h1,
+	h4 {
+		color: #eee;
+	}
+}
+h1,
+h4 {
+	margin: 0 0 20px 0;
+}
+h4 {
+	text-align: center;
+}
+#filter-wrapper,
+#content-wrapper,
+#how-to-wrapper {
+    float: left;
+    width: 100%;
+}
+#filter-wrapper .container,
+#content-wrapper .container,
+#how-to-wrapper .container {
+	background-color: #fff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#filter-wrapper #filter,
+#content-wrapper #content,
+#how-to-wrapper #how-to {
+}
+/* Filter */
+#filter-wrapper {
+	line-height: 44px;
+}
+@media (min-width: 768px) {
+	#filter-wrapper .container {
+		border-radius: 5px 5px 0 0;
+		-moz-border-radius: 5px 5px 0 0;
+		-webkit-border-radius: 5px 5px 0 0;;
+	}
+}
+#filter-wrapper .instructions {
+	line-height: 1.5em;
+}
+#filter-wrapper input {
+	background-color: #EEE;
+    border: 0;
+    margin: 0 10px 0 0;
+    padding: 10px;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+/* Content */
+#content-wrapper ul {
+	margin: 0;
+	padding: 0;
+}
+#content-wrapper li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+#content-wrapper li img {
+	display: inline-block;
+}
+/* How */
+@media (min-width: 768px) {
+	#how-to-wrapper .container {
+		border-radius: 0 0 5px 5px;
+		-moz-border-radius: 0 0 5px 5px;
+		-webkit-border-radius: 0 0 5px 5px;
+	}
+	#how-to-wrapper {
+		margin-bottom: 20px;
+	}
+}
+pre .indent-1 {
+	margin-left: 10px;
+}
+pre .indent-2 {
+	margin-left: 20px;
+}
+pre .indent-3 {
+	margin-left: 30px;
+}
+pre .indent-4 {
+	margin-left: 40px;
+}
+pre .indent-5 {
+	margin-left: 50px;
+}

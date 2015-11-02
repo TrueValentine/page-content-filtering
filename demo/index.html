@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Page Content Filtering | Carlos Ruiz</title>
+
+<!-- jQuery -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<!-- Bootstrap for demo -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Page Content Filtering -->
+<script src="js/page-content-filtering.js"></script>
+<link href="css/page-content-filtering.css" rel="stylesheet" type="text/css" />
+
+<!-- Demo -->
+<link href="css/demo.css" rel="stylesheet" type="text/css" />
+
+<script>
+jQuery(document).ready(function() {
+  pcFiltering('li');
+});
+</script>
+
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Page Content Filtering</h1>
+    </div>
+  </div>
+</div>
+<!-- BEGIN DEMO -->
+<div id="filter-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="filter">
+          <p class="instructions">Type the name or color of a fruit &mdash; like <strong>RED</strong> or <strong>APPLE</strong> &mdash; to see how this works!</p>
+          <input id="terms" name="terms" type="text" value="" />
+          <span class="count">
+            <span class="filter-count"></span> Matches
+          </span>
+          <span class="count-single">
+            <span class="filter-count"></span> Match
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="content-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="content">
+          <ul>
+            <li><img src="images/red-apple.jpg" class="img-responsive" /><span class="hidden-keywords">fruits apples red</span></li>
+            <li><img src="images/bananas.jpg" class="img-responsive" /><span class="hidden-keywords">fruits bananas yellow</span></li>
+            <li><img src="images/strawberry.jpg" class="img-responsive" /><span class="hidden-keywords">fruits strawberry strawberries red</span></li>
+            <li><img src="images/green-apple.jpg" class="img-responsive" /><span class="hidden-keywords">fruits apples green</span></li>
+            <li><img src="images/strawberry.jpg" class="img-responsive" /><span class="hidden-keywords">fruits strawberry strawberries red</span></li>
+            <li><img src="images/green-apple.jpg" class="img-responsive" /><span class="hidden-keywords">fruits apples green</span></li>
+            <li><img src="images/red-apple.jpg" class="img-responsive" /><span class="hidden-keywords">fruits apples red</span></li>
+            <li><img src="images/bananas.jpg" class="img-responsive" /><span class="hidden-keywords">fruits bananas yellow</span></li>
+            <li><img src="images/green-apple.jpg" class="img-responsive" /><span class="hidden-keywords">fruits apples green</span></li>
+            <li><img src="images/red-apple.jpg" class="img-responsive" /><span class="hidden-keywords">fruits apples red</span></li>
+            <li><img src="images/bananas.jpg" class="img-responsive" /><span class="hidden-keywords">fruits bananas yellow</span></li>
+            <li><img src="images/strawberry.jpg" class="img-responsive" /><span class="hidden-keywords">fruits strawberry strawberries red</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END DEMO -->
+<!-- BEGIN HOW TO -->
+<div id="how-to-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="how-to-wrapper">
+          <h5>The following goes in the &lt;head&gt;</h5>
+          <pre>&lt;script src="http://code.jquery.com/jquery-1.11.2.min.js"&gt;&lt;/script&gt;<br /><br />&lt;script src="js/page-content-filtering.js"&gt;&lt;/script&gt;<br />&lt;link href="css/page-content-filtering.css" rel="stylesheet" type="text/css" /&gt;<br /><br />&lt;script&gt;<br />jQuery(document).ready(function() {<br /><span class="indent-1">// Fire the plugin and indicate the container type within #content that you would like to target</span><br /><span class="indent-1">pcFiltering('li');</span><br />});<br />&lt;/script&gt;</pre>
+          <br />
+          <h5>The following goes in the &lt;body&gt;</h5>
+          <pre>&lt;div id="filter-wrapper"&gt;<br /><span class="indent-1">&lt;div id="filter"&gt;</span><br /><span class="indent-2">&lt;input id="terms" name="terms" type="text" value="" /&gt;</span><br /><span class="indent-2">&lt;span class="count"&gt;</span><br /><span class="indent-3">&lt;span class="filter-count"&gt;&lt;/span&gt; Matches</span><br /><span class="indent-2">&lt;/span&gt;</span><br /><span class="indent-2">&lt;span class="count-single"&gt;</span><br /><span class="indent-3">&lt;span class="filter-count"&gt;&lt;/span&gt; Match</span><br /><span class="indent-2">&lt;/span&gt;</span><br /><span class="indent-1">&lt;/div&gt;</span><br />&lt;/div&gt;<br />&lt;div id="content-wrapper"&gt;<br /><span class="indent-1">&lt;div id="content"&gt;</span><br /><span class="indent-2">&lt;ul&gt;</span><br /><span class="indent-3">&lt;li&gt;</span><br /><span class="indent-4">&lt;p&gt;Visible keywords would go here&lt;/p&gt;</span><br /><span class="indent-4">&lt;span class="hidden-keywords"&gt;</span><br /><span class="indent-5">&lt;p&gt;Hidden keywords would go here&lt;/p&gt;</span><br /><span class="indent-4">&lt;/span&gt;</span><br /><span class="indent-3">&lt;/li&gt;</span><br /><span class="indent-2">&lt;/ul&gt;</span><br /><span class="indent-1">&lt;/div&gt;</span><br />&lt;/div&gt;</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h4>Copyright 2015 Carlos Ruiz | <a href="http://carlosruiz.me/web-development/" target="_blank">carlosruiz.me</a></h4>
+    </div>
+  </div>
+</div>
+<!-- END HOW TO -->
+</body>
+</html>
